@@ -21,6 +21,7 @@ class Application
         @@cart.each do |item|
           resp.write "#{item}\n"
         end
+      end
     elsif req.path.match(/add/)
       search_term = req.params["item"]
       resp.write handle_add(search_term)
